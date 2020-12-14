@@ -10,6 +10,10 @@ function sendMail(contactForm) {
         },
         function (error) {
             console.log("FAILED", error);
-        });
+        })
+    .then(function () {
+        contactForm.reset();
+    })
+    return false;
 }  
-6
+
